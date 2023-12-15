@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.4rem rgba(11, 157, 89, 0.5);
+}
+
+html{
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+
+    /* Only works if there is othing absolutely positioned in relation to body */
+    overflow-x: hidden;
+
+    /* For Smooth Scrolling */
+    /* scroll-behavior: smooth; */
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    overflow-x: hidden;
+    
+}
+
+/****************************/
+/* GENRAL REUSABLE COMPONENTS */
+/****************************/
+
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.grid{
+    display: grid;
+    row-gap: 9.6rem;
+    column-gap: 6.4rem; 
+
+}
+
+.grid:not(:last-child){
+    margin-bottom: 9.6rem;
+}
+.grid--2-cols{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-center-v{
+    align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary{
+    font-weight: 700;
+    color: #333;
+    /* color: #45260a; */
+    letter-spacing: -0.5px;
+
+}
+
+.heading-primary{
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+
+.heading-tertiary{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.sub-heading{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:#0b9d58;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+strong{
+    font-weight: 500;
+}
+
+.btn, .btn:link, .btn:visited{
+    display: inline-block;
+    /* background-color: #e67e22;
+    color: #fff; */
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1.6rem 3.3rem;
+    border-radius: 9px;
+
+    /* Only necessary for btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    /* PUT TRANSITION ON ORIGINAL STATE */
+    /* transition: background-color 0.4s; */
+    transition: all 0.4s;
+}
+
+.btn--full:link, .btn--full:visited{
+    background-color: #0b9d58;
+    color: #fff;
+}
+
+.btn--outline:link, .btn--outline:visited{
+    background-color: #fff;
+    color: #333;
+}
+
+.btn--full:hover, .btn--full:active{
+    background-color: #098148;
+}
+
+.btn--outline:hover, .btn--outline:active{
+    background-color:#e2fdf0;
+    /* TRICK TO ADD BORDER INSIDE */
+    box-shadow: inset 0 0 0 4px #fff;
+    /* background-color: #e9ecef; */
+}
+
+.btn--form{
+    background-color: #45260a;
+    color: #e2fdf0;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover{
+    color: #555;
+    background-color: #fff;
+}
+
+
+/* HELPER/SETTING CLASSES */
+.margin-bottom-md{
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.margin-right-sm{
+    margin-right: 1.6rem;
+}
+
